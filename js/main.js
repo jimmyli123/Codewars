@@ -2,6 +2,11 @@
 
 // 7kyu - number with 3 roots
 
+// I initialize 3 variables with the square root, fourth root, 
+// and the eighth root. If modulus of 1 is equal to 0, it means 
+// its a whole integer. Thus if all 3 variables modulus 1 === 0,
+// then its a perfect integer.
+
 function perfectRoots(n){
     let secRoot = Math.sqrt(n);
     let fourthRoot = Math.sqrt(secRoot);
@@ -13,4 +18,34 @@ function perfectRoots(n){
     
   }
 
-  
+  // 6kyu - Take a ten minute walk
+
+  // Length of walk array has to equal exactly 10. 
+  // If the count of each direction is equal to its
+  // opposite direction, then we are back at our
+  // starting point.
+
+  function isValidWalk(walk) {
+    let north = 0;
+    let south = 0;
+    let west = 0;
+    let east = 0;
+    if (walk.length !==10 ) { return false;}
+    for (let i = 0; i < walk.length; i++) {
+      switch(walk[i]) {
+          case 'n':
+          north++;
+          break;
+          case 's':
+          south++;
+          break;
+          case 'w':
+          west++;
+          break;
+          case 'e':
+          east++;
+          break;
+      }
+    }
+    if (north === south && west === east) {return true;}
+  }
