@@ -49,3 +49,27 @@ function perfectRoots(n){
     }
     if (north === south && west === east) {return true;}
   }
+
+
+  // 7kyu - Char Code Calculation
+
+  function calc(x){
+    let total1 = "";
+    for (let i = 0; i < x.length; i++) {
+      total1+=x.charCodeAt(i);
+    }
+    let total2 = total1.replace(/7/g,'1');
+    
+    let sumtotal1 = 0;
+    for (char of total1) {
+      sumtotal1+=Number(char);
+    }
+    let sumtotal2 = 0;
+    for (char of total2) {
+      sumtotal2+=Number(char);
+    }
+    return sumtotal1 - sumtotal2;
+  }
+
+console.log(calc("ABC"));
+console.log(calc("aaaaaddddr"));
