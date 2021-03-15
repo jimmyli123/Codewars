@@ -73,3 +73,18 @@ function perfectRoots(n){
 
 console.log(calc("ABC"));
 console.log(calc("aaaaaddddr"));
+
+
+// 6kyu - Playing with digits
+
+function digPow(n, p){
+  // ...
+  let numStr = String(n);
+  let numArray = numStr.split('');
+  let sum = 0;
+  numArray.forEach((element,index) => {
+    sum+=Math.pow(Number(element), index+p);
+  })
+  if (sum % n === 0) {return sum / n}
+  else { return -1}
+}
