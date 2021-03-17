@@ -88,3 +88,20 @@ function digPow(n, p){
   if (sum % n === 0) {return sum / n}
   else { return -1}
 }
+
+// 6kyu - Is a number prime?
+
+
+function isPrime(num) {
+  //TODO
+  if (num < 2) { return false;}
+  else if (num ===2 || num ===3 || num ===5 ) { return true;}
+  else if (num % 2 ===0) { return false;}
+  else {
+    for (let i = 3; i*i <= num; i+=2) {
+      if (num % i ===0) { return false;}
+    }
+    return true;
+  }
+  
+}
