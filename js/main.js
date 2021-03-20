@@ -120,3 +120,20 @@ function likes(names) {
   return `${names[0]}, ${names[1]} and ${numberOfLikes - 2} others like this`
   }
 }
+
+// 6kyu - Convert string to camel case
+
+function toCamelCase(str){
+  let symbol = "";
+  if (/[\-]/.test(str)) {
+    symbol = '-'
+  }
+  else if(/[\_]/.test(str)) {
+    symbol = '_'
+  }
+  let tempArray = str.split(symbol);
+  for (let i =1; i < tempArray.length; i++) {
+    tempArray[i] = tempArray[i][0].toUpperCase() + tempArray[i].substr(1);
+  }
+  return tempArray.join('');
+}
