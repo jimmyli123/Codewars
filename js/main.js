@@ -137,3 +137,20 @@ function toCamelCase(str){
   }
   return tempArray.join('');
 }
+
+// 7kyu - Isograms
+
+function isIsogram(str){
+  let temp = str.toLowerCase();
+  if (str.length === 0) { return true;}
+  else {
+    while (temp.length > 0) {
+      let test = temp.substring(1);
+      if (test.includes(temp.charAt(0))) {
+        return false;
+      } 
+      temp = temp.substring(1);
+    }
+    return true;
+  }
+}
