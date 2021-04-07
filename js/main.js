@@ -74,6 +74,22 @@ function perfectRoots(n){
 console.log(calc("ABC"));
 console.log(calc("aaaaaddddr"));
 
+// 7kyu - Isograms
+
+function isIsogram(str){
+  let temp = str.toLowerCase();
+  if (str.length === 0) { return true;}
+  else {
+    while (temp.length > 0) {
+      let test = temp.substring(1);
+      if (test.includes(temp.charAt(0))) {
+        return false;
+      } 
+      temp = temp.substring(1);
+    }
+    return true;
+  }
+}
 
 // 6kyu - Playing with digits
 
@@ -138,19 +154,20 @@ function toCamelCase(str){
   return tempArray.join('');
 }
 
-// 7kyu - Isograms
+// 6kyu - Format a string of names like 'Bart, Lisa & Maggie'.
 
-function isIsogram(str){
-  let temp = str.toLowerCase();
-  if (str.length === 0) { return true;}
+function list(names){
+
+  let len = names.length
+  if (len === 1) { return names[0].name} 
+  else if (len ===0) { return ''}
   else {
-    while (temp.length > 0) {
-      let test = temp.substring(1);
-      if (test.includes(temp.charAt(0))) {
-        return false;
-      } 
-      temp = temp.substring(1);
+    let answer = "";
+    for (let i =0; i <len - 2; i++) {
+      answer = answer + names[i].name + ", "
     }
-    return true;
+    answer = `${answer}${names[len - 2].name} & ${names[len - 1].name}`
+    return answer
   }
+  
 }
