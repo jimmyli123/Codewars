@@ -171,3 +171,25 @@ function list(names){
   }
   
 }
+
+// 6kyu - Find the Parity Outlier
+
+function findOutlier(integers){
+
+  let even = 0;
+  let odd = 0;
+  let lastEven = 0;
+  let lastOdd = 0;
+    for (let i =0; i < integers.length; i++) {
+      if (integers[i] % 2 ===0) {
+        lastEven = integers[i];
+        even++
+      }
+      else {
+        lastOdd = integers[i];
+        odd++
+      }
+    }
+  if (even === 1) { return lastEven;}
+  else { return lastOdd;}
+  }
