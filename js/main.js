@@ -203,3 +203,24 @@ function findOutlier(integers){
     }
     return text.toUpperCase().split("").filter(x => alpha[x] > 0).map(x => alpha[x]).join(" ")
   }
+
+  // 6kyu - Adjacent repeated words in a string
+
+  function countAdjacentPairs(searchString) {
+    let arr = searchString.toLowerCase().split(" ")
+    let windowShade = 1;
+    let counter = 0;
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === arr[windowShade]) {
+        while (arr[i] === arr[windowShade]) {
+          windowShade++
+        }
+        i = windowShade - 1
+        counter++
+      }
+      windowShade++
+    }
+    return counter;
+  }
+  
