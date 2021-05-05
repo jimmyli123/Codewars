@@ -224,3 +224,10 @@ function findOutlier(integers){
     return counter;
   }
   
+  // 6kyu - Create Phone Number
+  function createPhoneNumber(numbers){
+    let zip = String(numbers.shift()) + String(numbers.shift()) + String(numbers.shift())
+    let middle = String(numbers.shift()) + String(numbers.shift()) + String(numbers.shift())
+    let rest = numbers.join("")
+    return `(${zip}) ${middle}-${rest}`
+  }
