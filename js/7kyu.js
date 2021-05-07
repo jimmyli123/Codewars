@@ -69,3 +69,13 @@ function solution(str, ending){
     if (str.substr(str.length - xLength) === ending) { return true}
     else { return false;}
   }
+
+
+  // 7kyu - Thinkful - String Drills: Poem formatter
+  
+
+  function formatPoem(poem) {
+    //your code here
+    let eachSentence = poem.split(". ")
+    return eachSentence.join(".\n")
+  }
