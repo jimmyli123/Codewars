@@ -79,3 +79,16 @@ function solution(str, ending){
     let eachSentence = poem.split(". ")
     return eachSentence.join(".\n")
   }
+
+
+  // 7kyu - Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+
+  function countDevelopers(list) {
+    let counter = 0;
+    list.forEach(developer => {
+      if (developer.continent === "Europe" && developer.language === "JavaScript") {
+        counter++;
+      }
+    })
+    return counter
+  }
