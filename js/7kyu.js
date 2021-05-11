@@ -92,3 +92,12 @@ function solution(str, ending){
     })
     return counter
   }
+
+  // 7kyu - Coding Meetup #2 - Higher-Order Functions Series - Greet developers
+
+  function greetDevelopers(list) {
+    list.forEach(developer => {
+      developer['greeting'] = `Hi ${developer.firstName}, what do you like the most about ${developer.language}?`
+    })
+    return list
+  }
