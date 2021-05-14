@@ -12,3 +12,11 @@ function boolToWord( bool ){
     if (bool) { return 'Yes'}
     else { return 'No'}
   }
+
+
+// Do I get a bonus?
+
+function bonusTime(salary, bonus) {
+      if (bonus) { return `£${salary * 10}`}
+      else { return `£${salary}`}
+    }
