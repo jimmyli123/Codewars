@@ -101,3 +101,13 @@ function solution(str, ending){
     })
     return list
   }
+
+  // Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+
+  function isRubyComing(list) {
+    let answer = false;
+    list.forEach( developer => {
+      if (developer.language === 'Ruby') answer = true
+    })    
+    return answer
+  }
