@@ -111,3 +111,25 @@ function solution(str, ending){
     })    
     return answer
   }
+
+  // Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+
+  function getFirstPython(list) {
+    let answer = `There will be no Python developers`;
+    list.forEach(developer => {
+      if (developer.language === 'Python') { answer = `${developer.firstName}, ${developer.country}`}
+    })
+    return answer
+  }
+
+
+  // Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+
+  function getFirstPython(list) {
+    // Thank you for checking out my kata :)
+    for (let i =0; i < list.length; i++) {
+      let currentDev = list[i]
+      if (list[i].language === 'Python') { return `${currentDev.firstName}, ${currentDev.country}`}
+    }
+    return `There will be no Python developers`
+  }
