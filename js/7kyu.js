@@ -133,3 +133,18 @@ function solution(str, ending){
     }
     return `There will be no Python developers`
   }
+
+  // Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+
+  function countLanguages(list) {
+
+    let answer = {}
+    list.forEach( developer => {
+      let currentLanguage = developer.language
+      if (answer[currentLanguage] !== undefined) { answer[currentLanguage]++}
+      else {
+        console.log(`else: ${answer.currentLanguage}`)
+        answer[currentLanguage] = 1}
+    })
+    return answer
+  }
