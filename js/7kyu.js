@@ -148,3 +148,15 @@ function solution(str, ending){
     })
     return answer
   }
+
+  // Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?
+  function isSameLanguage(list) {
+    let firstDevLan = list[0].language
+    for (const dev of list) {
+      console.log(dev)
+      if (dev.language != firstDevLan) {
+        return false
+      }
+    }
+    return true
+  }
