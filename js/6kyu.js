@@ -174,3 +174,24 @@ function findOutlier(integers){
     let rest = numbers.join("")
     return `(${zip}) ${middle}-${rest}`
   }
+
+  // Are they the "same"?
+
+  function comp(array1, array2){
+    try {
+      if (array1 === null || array2 === null) {return false}
+      for (let item1 of array1) {
+      let itemSquared = item1 * item1
+      if (array2.includes(itemSquared)) {
+        let itemIndex = array2.indexOf(itemSquared)
+        array2.splice(itemIndex, 1)
+      } 
+      else { return false; }
+    }
+    return true;
+    }
+    catch(error) {
+      console.log(`Error happened: array1 is ${array1}`)
+    }
+    
+  }
