@@ -195,3 +195,18 @@ function findOutlier(integers){
     }
     
   }
+
+  // function findSenior(list) {
+
+  let greatest = 0;
+  let answerArray = []
+  for (const dev of list) {
+    if (dev.age > greatest) { greatest = dev.age}
+  }
+  for (const dev of list) {
+    if (dev.age === greatest) {
+      answerArray.push(dev)
+    }
+  }
+  return answerArray
+}
