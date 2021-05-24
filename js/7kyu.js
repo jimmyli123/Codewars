@@ -160,3 +160,5 @@ function solution(str, ending){
     }
     return true
   }
+
+  // 

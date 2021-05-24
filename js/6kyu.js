@@ -196,8 +196,9 @@ function findOutlier(integers){
     
   }
 
-  // function findSenior(list) {
+  // Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
 
+  function findSenior(list) {
   let greatest = 0;
   let answerArray = []
   for (const dev of list) {
@@ -209,4 +210,18 @@ function findOutlier(integers){
     }
   }
   return answerArray
+}
+
+
+// Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
+function allContinents(list) {
+  if (list.length < 5) { return false}
+  let continents = {'Africa':0, 'Americas':0, 'Asia':0, 'Europe':0, 'Oceania':0}
+  for (let dev of list) {
+    continents[dev.continent]++;
+  }
+  for (let cont in continents) {
+    if (continents[cont] === 0) { return false}
+  }
+  return true;
 }
