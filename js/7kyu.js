@@ -173,3 +173,18 @@ function solution(str, ending){
     })
     return Math.round(ageSum/ageArray.length)
   }
+
+  // Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
+
+  function findAdmin(list, lang) {
+    // Create an array that will contain the developers that fulfill our requirements.
+    // loop through each developer
+    // if developer's language === lan and githubAdmin === yes, add this developer to our answerArray
+    let answerArray = []
+    for (const developer of list) {
+      if (developer.language === lang && developer.githubAdmin === 'yes') {
+        answerArray.push(developer)
+      }
+    }
+    return answerArray
+  }
