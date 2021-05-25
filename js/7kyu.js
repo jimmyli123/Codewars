@@ -161,4 +161,15 @@ function solution(str, ending){
     return true
   }
 
-  // 
+  // Coding Meetup #11 - Higher-Order Functions Series - Find the average age
+  function getAverageAge(list) {
+    let ageArray = []
+    for (let dev of list) {
+      ageArray.push(dev.age)
+    }
+    console.log(ageArray)
+    let ageSum = ageArray.reduce((acc, currentVal) => {
+      return acc + currentVal
+    })
+    return Math.round(ageSum/ageArray.length)
+  }
