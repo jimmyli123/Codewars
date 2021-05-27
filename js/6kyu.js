@@ -225,3 +225,13 @@ function allContinents(list) {
   }
   return true;
 }
+
+// Coding Meetup #10 - Higher-Order Functions Series - Create usernames
+function addUsername(list) {
+  
+  let currentYear = new Date().getFullYear()
+  for (const dev of list) {
+    dev['username'] = dev.firstName.toLowerCase() + dev.lastName[0].toLowerCase() + String(currentYear - dev.age)
+  }
+  return list
+}
