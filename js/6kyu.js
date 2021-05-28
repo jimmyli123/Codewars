@@ -235,3 +235,24 @@ function addUsername(list) {
   }
   return list
 }
+
+// Coding Meetup #13 - Higher-Order Functions Series - Is the meetup language-diverse?
+
+function isLanguageDiverse(list) {
+  let javCounter = 0;
+  let pythonCounter = 0;
+  let rubyCounter = 0;
+  for (const dev of list) {
+    if (dev.language === 'Python') {
+      pythonCounter++
+    }
+    else if (dev.language === 'Ruby') {
+      rubyCounter++
+    }
+    else if (dev.language === 'JavaScript'){ javCounter++ }
+  }
+  let greatAmount = Math.max(javCounter, rubyCounter, pythonCounter)
+  let smallest = Math.min(javCounter, rubyCounter, pythonCounter)
+  if (greatAmount / smallest > 2) { return false}
+  else { return true;}
+}
