@@ -188,3 +188,19 @@ function solution(str, ending){
     }
     return answerArray
   }
+
+  // Coding Meetup #14 - Higher-Order Functions Series - Order the food
+
+  function orderFood(list) {
+
+    let answerObj = {}
+    for (const dev of list) {
+      if(answerObj[dev.meal] === undefined) {
+        answerObj[dev.meal] = 1
+      }
+      else {
+        answerObj[dev.meal]++
+      }
+    }
+    return answerObj
+  }
