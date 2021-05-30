@@ -256,3 +256,15 @@ function isLanguageDiverse(list) {
   if (greatAmount / smallest > 2) { return false}
   else { return true;}
 }
+
+// Coding Meetup #15 - Higher-Order Functions Series - Find the odd names
+
+function findOddNames(list) {
+  const results = list.filter(dev => {
+    let devName = dev.firstName
+     return devName.split("").reduce((acc, current) => {
+      return acc + current.charCodeAt(0)
+    }, +0) %2 != 0
+  })
+  return results
+}
