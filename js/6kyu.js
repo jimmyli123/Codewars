@@ -268,3 +268,19 @@ function findOddNames(list) {
   })
   return results
 }
+
+// Coding Meetup #16 - Higher-Order Functions Series - Ask for missing details
+
+function askForMissingDetails(list) {
+  let nullElements = list.filter(dev => {
+    return Object.values(dev).includes(null)
+  })
+  for (let dev of nullElements) {
+    for (let property in dev) {
+    if (dev[property] === null) {
+      dev['question'] = 'Hi, could you please provide your '  + property + '.'
+    }
+  }
+  }
+  return nullElements
+}
