@@ -204,3 +204,16 @@ function solution(str, ending){
     }
     return answerObj
   }
+
+  // Triangle area.
+  function tArea(tStr) {
+    console.log(tStr.split("."))
+    let arr = tStr.split(".")
+    let count = 0;
+    for (let item of arr) {
+      if (item === "\n") {count++}
+    }
+    console.log(count)
+    let height = count - 2
+    return (height*height) / 2
+  }
