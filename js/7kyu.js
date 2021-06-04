@@ -217,3 +217,11 @@ function solution(str, ending){
     let height = count - 2
     return (height*height) / 2
   }
+  // Highest and Lowest
+  function highAndLow(numbers){
+    // ...
+    let numbArray = numbers.split(" ")
+    let high = Math.max(...numbArray)
+    let low = Math.min(...numbArray)
+    return `${high} ${low}`
+  }
