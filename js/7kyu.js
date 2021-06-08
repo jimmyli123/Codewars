@@ -225,3 +225,14 @@ function solution(str, ending){
     let low = Math.min(...numbArray)
     return `${high} ${low}`
   }
+
+
+  // Square Every Digit
+
+  function squareDigits(num){
+    //may the code be with you
+    let numArray = String(num).split("")
+    console.log(num)
+    return Number(numArray.reduce((acc, currentValue) => 
+                    acc + (Number(currentValue) * Number(currentValue)), ""))
+  }
