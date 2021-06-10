@@ -88,3 +88,13 @@ function answer3(){
   return "yes";
 }
 
+// The Wide-Mouthed frog!
+function mouthSize(animal) {
+  let animalSmall = animal.toLowerCase()
+  switch (animalSmall) {
+      case 'alligator': 
+      return 'small'
+      default:
+      return 'wide'
+  }
+}
