@@ -236,3 +236,8 @@ function solution(str, ending){
     return Number(numArray.reduce((acc, currentValue) => 
                     acc + (Number(currentValue) * Number(currentValue)), ""))
   }
+
+  // Sort arrays - 1
+  sortme = function( names ){
+    return names.sort()
+  }
