@@ -241,3 +241,17 @@ function solution(str, ending){
   sortme = function( names ){
     return names.sort()
   }
+
+  // Chicken Sexing
+  function correctness(bobsDecisions, expertDecisions) {
+    let count = 0;
+    for (let i = 0; i < bobsDecisions.length; i++) {
+      if (bobsDecisions[i] === expertDecisions[i]) {
+        count++
+      }
+      else if (bobsDecisions[i] === "?" || expertDecisions[i] ==="?") {
+        count+=0.5
+      }
+    }
+    return count;
+  }
