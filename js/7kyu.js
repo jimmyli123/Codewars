@@ -269,3 +269,23 @@ function solution(str, ending){
     }
     return answer
   }
+
+  // Fizz Buzz
+
+function fizzbuzz(n)
+{
+  let answerArray = []
+  for (let i =1; i <= n; i++) {
+    if (i%3 === 0 && i%5 === 0) {
+      answerArray.push("FizzBuzz")
+    }
+    else if (i % 5 ===0) {
+      answerArray.push("Buzz")
+    }
+    else if (i%3 ===0) {
+      answerArray.push("Fizz")
+    }
+    else answerArray.push(i)
+  }
+  return answerArray
+}
