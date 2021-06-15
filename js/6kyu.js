@@ -284,3 +284,8 @@ function askForMissingDetails(list) {
   }
   return nullElements
 }
+
+// Meeting
+function meeting(s) {
+  return s.toUpperCase().split(";").map(person => "(" + person.split(":").reverse().join(", ") + ")" ).sort().join("")
+}
