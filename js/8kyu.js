@@ -98,3 +98,9 @@ function mouthSize(animal) {
       return 'wide'
   }
 }
+
+// Is the string uppercase?
+String.prototype.isUpperCase = function() {
+  // your code here
+  return this.toString() === this.toUpperCase()
+}
