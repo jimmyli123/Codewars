@@ -109,3 +109,13 @@ String.prototype.isUpperCase = function() {
 function isDivisible(n, x, y) {
   return n%x===0 && n%y===0
 }
+
+
+// Reversed sequence
+const reverseSeq = n => {
+  let answer =[];
+  for (let i = n; i>0; i--) {
+    answer.push(i)
+  }
+  return answer
+};
