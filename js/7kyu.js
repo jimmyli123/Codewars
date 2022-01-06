@@ -296,3 +296,12 @@ function filter_list(l) {
   // Return a new array with the strings filtered out
   return l.filter(el => typeof(el) === 'number')
 }
+
+// Mumbling
+function accum(s) {
+	// your code
+  let arr = s.split("")
+  return arr.map((item,index) => {
+    return item.toUpperCase() + item.toLowerCase().repeat(index)
+  }).join("-")
+}
