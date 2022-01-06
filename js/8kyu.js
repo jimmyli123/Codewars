@@ -119,3 +119,8 @@ const reverseSeq = n => {
   }
   return answer
 };
+
+// Square(n) Sum
+function squareSum(numbers){
+  return numbers.reduce((accum, cur) => accum + Math.pow(cur,2),0)
+}
