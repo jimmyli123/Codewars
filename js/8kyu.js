@@ -152,3 +152,11 @@ class SmallestIntegerFinder {
 function squareSum(numbers){
   return numbers.reduce((accum, cur) => accum + Math.pow(cur,2),0)
 }
+
+// L1:Set Alarm
+function setAlarm(employed, vacation){
+  if (employed && !vacation) {
+    return true;
+  }
+  else {return false;}
+}
