@@ -289,3 +289,18 @@ function askForMissingDetails(list) {
 function meeting(s) {
   return s.toUpperCase().split(";").map(person => "(" + person.split(":").reverse().join(", ") + ")" ).sort().join("")
 }
+
+// Duplicate Encoder
+// This answer was provided by a colleague and I really liked it. Didn't realize you can use the map function like that.
+
+function duplicateEncode(word){
+  if (word.length===0) {
+    return ""
+  }
+return word.toLowerCase()
+.split('')
+.map((c,i,a) => a.indexOf(c) === a.lastIndexOf(c) ? "(" : ")")
+.join('')
+
+
+}
